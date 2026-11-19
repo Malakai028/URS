@@ -21,6 +21,7 @@
     "test:browser": "node tests/browser.mjs && node tests/browser-account.mjs && node tests/browser-creatures.mjs",
     "test:creature-bench": "node scripts/toolchain/creature-bench.mjs",
     "test:expedition": "node scripts/toolchain/expedition-playthrough.mjs",
+    "release:windows": "node scripts/release/windows-package.mjs",
     "typecheck": "tsc --noEmit",
     "test:rules": "node --test tests/engine.test.ts tests/toolchain-properties.test.ts",
     "test:a11y": "node scripts/toolchain/accessibility.mjs",

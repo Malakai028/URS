@@ -808,6 +808,7 @@ try {
     .getByText(/3 · остаток 0/)
     .waitFor();
   await a.screenshot({ path: join(screenshotDir, "converter.png") });
+  await button(a.getByRole("dialog", { name: "Инструменты" }), "Закрыть окно").click();
   await b
     .getByRole("combobox", { name: /Цель действия/ })
     .selectOption("cache");
@@ -816,10 +817,10 @@ try {
     .locator(".workspace aside p")
     .filter({ hasText: "Открытый тайник" })
     .waitFor();
-    await button(toolsBar, "Задания").click();
-    await a.getByText("Тайник открыт партией.", { exact: true }).waitFor();
-    await a.getByText("Маяк пока погашен.", { exact: true }).waitFor();
-    await a.keyboard.press("Escape");
+  await button(toolsBar, "Задания").click();
+  await a.getByText("Тайник открыт партией.", { exact: true }).waitFor();
+  await a.getByText("Маяк пока погашен.", { exact: true }).waitFor();
+  await a.keyboard.press("Escape");
   await b
     .getByRole("combobox", { name: /Цель действия/ })
     .selectOption({ label: "Дорожный клинок" });
