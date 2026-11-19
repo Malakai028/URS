@@ -6,6 +6,7 @@ import {
   writeFileSync,
   copyFileSync,
   rmSync,
+  renameSync,
 } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
@@ -70,10 +71,12 @@ try {
   );
   execFileSync(
     "tar.exe",
-    ["-a", "-cf", join(output, "URS-Windows.zip"), "-C", work, "."],
+    ["-a", "-cf", join(output, "assembling.zip"), "-C", work, "."],
     { stdio: "inherit" },
   );
+  renameSync(join(output, "assembling.zip"), join(output, "URS-Windows.zip"));
   console.log(join(output, "URS-Windows.zip"));
 } finally {
+  rmSync(join(output, "assembling.zip"), { force: true });
   rmSync(work, { recursive: true, force: true });
 }

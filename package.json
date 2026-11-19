@@ -26,7 +26,7 @@
     "test:rules": "node --test tests/engine.test.ts tests/toolchain-properties.test.ts",
     "test:a11y": "node scripts/toolchain/accessibility.mjs",
     "content:check": "node scripts/toolchain/content.mjs",
-    "format:check": "prettier --check scripts/toolchain tests/toolchain-properties.test.ts .agents/skills/ure-development",
+    "format:check": "prettier --check scripts/toolchain tests/toolchain-properties.test.ts",
     "security:audit": "npm audit --audit-level=moderate",
     "security:secrets": "node scripts/toolchain/secrets.mjs",
     "security:staged": "node scripts/toolchain/secrets.mjs --staged",
