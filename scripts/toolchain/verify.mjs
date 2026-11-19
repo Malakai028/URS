@@ -7,6 +7,7 @@ for (const script of [
   "typecheck",
   "lint",
   "test",
+  "test:expedition",
   "content:check",
   "build",
   "test:browser",
