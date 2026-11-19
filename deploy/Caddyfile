@@ -1,0 +1,7 @@
+{
+    admin off
+}
+
+{$PUBLIC_ORIGIN} {
+    reverse_proxy 127.0.0.1:4173
+}

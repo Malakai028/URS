@@ -1,0 +1,457 @@
+dialog {
+  width: min(700px, 94vw);
+  max-height: 86svh;
+  padding: clamp(1rem, 3vw, 2.2rem);
+  border: 1px solid #647263;
+  border-radius: 12px;
+  background: #192623;
+  color: #e8ebdc;
+  box-shadow: 0 30px 100px #040a08aa;
+}
+dialog::backdrop {
+  background: #06100cd9;
+}
+dialog > h2,
+dialog section > h2 {
+  margin: 0.6rem 0 1rem;
+}
+.modalhead,
+.toolbar,
+.hubnav,
+.hotbar,
+.heroentry,
+.expedition {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.compose.chat-dock {
+  position: fixed;
+  flex-wrap: wrap;
+  z-index: 12;
+  inset: auto 1rem 1rem auto;
+  width: min(36rem, calc(100vw - 2rem));
+  max-height: 48svh;
+  overflow: auto;
+  padding: 0.75rem;
+  background: #192623;
+  border: 1px solid #647263;
+  border-radius: 8px;
+  box-shadow: 0 10px 28px #040a08aa;
+}
+.chat-recent {
+  flex-basis: 100%;
+  max-height: 10rem;
+  overflow: auto;
+  margin: 0;
+  padding: 0 1.2rem;
+  overflow-wrap: anywhere;
+}
+.chat-recent:empty {
+  display: none;
+}
+.compose.chat-dock input {
+  flex: 1 1 12rem;
+}
+.world-tabs {
+  flex-wrap: wrap;
+}
+.chat-delivery {
+  flex-basis: 100%;
+}
+.chat-dock input,
+.chat-dock select {
+  min-width: 0;
+  max-width: 100%;
+}
+@media (pointer: coarse), (max-width: 650px) {
+  .expedition button,
+  .chat-dock button,
+  .modalhead button,
+  .maptools button {
+    min-height: 44px;
+  }
+}
+.modalhead {
+  justify-content: space-between;
+  position: sticky;
+  top: -1rem;
+  background: #192623;
+  z-index: 2;
+}
+.modalhead button {
+  font-size: 1.3rem;
+}
+.hubnav {
+  margin: 0 0 1rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--line);
+}
+.hubnav button,
+.toolbar button {
+  font-size: 0.82rem;
+}
+.toolbar {
+  margin: 0.7rem 0;
+}
+.toolbar label {
+  margin: 0;
+}
+.toolbar > input {
+  width: min(100%, 280px);
+}
+.hubnav button,
+.hotbar button {
+  background: #23312e;
+  border-color: #43564b;
+}
+.hotbar {
+  margin-top: 0.8rem;
+}
+.hotbar button {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+}
+.hotbar kbd {
+  color: #d2b980;
+}
+.heroentry,
+.gear,
+.answer {
+  background: #20302b;
+  border: 1px solid #405348;
+  border-radius: 6px;
+  margin: 0.7rem 0;
+  padding: 0.9rem;
+}
+.heroentry section {
+  flex: 1;
+  min-width: 200px;
+}
+.portrait {
+  background: radial-gradient(
+    ellipse at 50% 60%,
+    #53634c,
+    #24352e 65%,
+    #1b2a24
+  );
+  border: 1px solid #61705a;
+  border-radius: 6px;
+  image-rendering: pixelated;
+}
+.choices {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.5rem;
+}
+.gear p,
+.heroentry p {
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+}
+.record {
+  width: 100%;
+  text-align: left;
+  margin: 0.2rem 0;
+  background: transparent;
+  border-width: 0 0 1px;
+  border-radius: 0;
+}
+.record span {
+  color: #e4eadf;
+}
+.record small {
+  margin: 0;
+}
+output {
+  display: block;
+  background: #0e1d19;
+  padding: 1rem;
+  border-left: 2px solid #c4ab72;
+  color: #e7d7ac;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  margin: 0.7rem 0;
+}
+dialog details {
+  padding: 0.5rem 0;
+}
+.pw {
+  min-width: 0;
+}
+.pw-field {
+  position: relative;
+}
+.pw-field input {
+  padding-inline-end: 3.4rem;
+  min-height: 44px;
+}
+.pw-field button {
+  position: absolute;
+  inset: 50% 0.15rem auto auto;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid transparent;
+  color: #e8ebdc;
+}
+.pw-field button:hover,
+.pw-field button[aria-pressed="true"] {
+  color: #f6d593;
+}
+.password-checks {
+  margin-block: 0.65rem 1rem;
+  font-size: 0.85rem;
+}
+.password-checks p,
+.password-match {
+  margin-block: 0.25rem;
+}
+.password-checks ul {
+  margin-block: 0.45rem;
+  padding: 0;
+  list-style: none;
+}
+.password-checks li[data-state="fail"] small,
+.pw input[aria-invalid="true"] {
+  color: #ffc8bd;
+}
+.password-checks meter {
+  width: min(16rem, 100%);
+  height: 0.85rem;
+}
+.password-match:empty {
+  margin: 0;
+}
+.login {
+  max-height: 98svh;
+  overflow: auto;
+  padding: 0.4rem;
+}
+.login form {
+  gap: 0.15rem;
+}
+.login label {
+  margin-bottom: 0.3rem;
+}
+.expedition {
+  justify-content: flex-end;
+}
+.expedition span {
+  margin-right: auto;
+  color: #d7c397;
+  font-family: Georgia, serif;
+}
+.map.expanded {
+  position: fixed;
+  inset: 2%;
+  width: 96%;
+  height: 96%;
+  z-index: 8;
+  box-shadow: 0 0 0 40px #0a1715e8;
+}
+.maptools {
+  max-width: 96%;
+  flex-wrap: wrap;
+}
+.busy {
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  z-index: 5;
+  border: 1px solid var(--line);
+  background: #1b2c24;
+  padding: 0.3rem 0.6rem;
+}
+.feedback {
+  position: fixed;
+  bottom: 12px;
+  left: 12px;
+  max-width: min(64vw, 600px);
+  z-index: 4;
+  background: #192c25f5;
+  border-left: 3px solid var(--gold);
+  padding: 0.5rem 0.85rem;
+  font-size: 0.85rem;
+  pointer-events: none;
+}
+.sheet .portrait {
+  float: right;
+  width: 42px;
+  height: 49px;
+}
+.sheet small {
+  display: block;
+}
+.map canvas:focus-visible {
+  outline-offset: -3px;
+}
+.workspace .mapcard {
+  align-self: start;
+}
+.workspace aside p {
+  margin-bottom: 0.6rem;
+}
+.workspace .map {
+  height: clamp(300px, 48vh, 560px);
+}
+.workspace .map.expanded {
+  height: 96%;
+}
+.top {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.journal {
+  margin-bottom: 2.5rem;
+}
+main.access {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+.expedition {
+  position: sticky;
+  top: 0;
+  z-index: 4;
+  padding: 0.45rem;
+  background: #192623;
+}
+.workspace canvas,
+.compose input {
+  scroll-margin-top: 8rem;
+}
+.sheet dl {
+  clear: both;
+}
+.error {
+  position: relative;
+  z-index: 5;
+}
+.access:has(.login input[name="confirmation"]) .cover {
+  position: sticky;
+  top: 0;
+}
+@media (max-width: 650px) {
+  .login {
+    max-height: none;
+  }
+  .access:has(.login input[name="confirmation"]) .cover {
+    position: relative;
+  }
+  .maptools button {
+    font-size: 0.67rem;
+  }
+  .top .brand {
+    font-size: 1rem;
+  }
+  .hotbar {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .hotbar button {
+    font-size: 0.72rem;
+    padding: 0.4rem;
+  }
+  .hubnav {
+    gap: 0.3rem;
+  }
+  .hubnav button {
+    padding: 0.4rem;
+  }
+  .modalhead {
+    top: -0.5rem;
+  }
+  .heroentry {
+    align-items: flex-start;
+  }
+  .feedback {
+    max-width: 90vw;
+  }
+}
+
+.speaker .portrait {
+  width: 24px;
+  height: 28px;
+  vertical-align: middle;
+  margin-right: 0.45rem;
+}
+.gear small {
+  display: block;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+}
+td,
+th {
+  padding: 0.35rem;
+  border-bottom: 1px solid #425247;
+  text-align: left;
+  font-size: 0.85rem;
+}
+.expedition + .workspace aside:last-child {
+  overflow: auto;
+  max-height: 660px;
+}
+.workspace hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 0.8rem 0;
+}
+.creature-quick {
+  background: #132722;
+  border: 1px solid #687c60;
+  border-radius: 0.5rem;
+  padding: 0.65rem 0.8rem;
+  margin-block: 0.45rem;
+  max-width: 29rem;
+  overflow-wrap: anywhere;
+}
+.creature-quick .row {
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+.creature-health {
+  display: grid;
+  gap: 0.25rem;
+  margin-block: 0.35rem;
+}
+.creature-health progress {
+  accent-color: #a8d4aa;
+  width: min(14rem, 100%);
+}
+.creature-select {
+  min-height: 44px;
+  text-align: start;
+}
+.creature-file header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  align-items: center;
+}
+.creature-file header canvas {
+  background: #20362e;
+  border-radius: 0.5rem;
+  width: 122px;
+  height: 112px;
+}
+.creature-file dt {
+  color: #d5dbb8;
+  margin-top: 0.65rem;
+  font-weight: 600;
+}
+.creature-file dd {
+  margin-inline-start: 0;
+  overflow-wrap: anywhere;
+}

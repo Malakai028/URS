@@ -1,0 +1,132 @@
+﻿id,family,name,status
+R-001,Люди,Человек,EARLIER DISCUSSED
+R-002,Люди,Горный человек,PROJECT CATALOG
+R-003,Люди,Степной человек,PROJECT CATALOG
+R-004,Люди,Морской человек,PROJECT CATALOG
+R-005,Люди,Северянин,PROJECT CATALOG
+R-006,Люди,Пустынник,PROJECT CATALOG
+R-007,Люди,Островитянин,PROJECT CATALOG
+R-008,Люди,Небесный человек,PROJECT CATALOG
+R-009,Эльфы,Эльф,EARLIER DISCUSSED
+R-010,Эльфы,Высший эльф,EARLIER DISCUSSED
+R-011,Эльфы,Тёмный эльф,EARLIER DISCUSSED
+R-012,Эльфы,Лунный эльф,EARLIER DISCUSSED
+R-013,Эльфы,Кровавый эльф,EARLIER DISCUSSED
+R-014,Эльфы,Звёздный эльф,EARLIER DISCUSSED
+R-015,Эльфы,Древний эльф,EARLIER DISCUSSED
+R-016,Эльфы,Первородный эльф,EARLIER DISCUSSED
+R-017,Эльфы,Лесной эльф,PROJECT CATALOG
+R-018,Эльфы,Морской эльф,PROJECT CATALOG
+R-019,Эльфы,Солнечный эльф,PROJECT CATALOG
+R-020,Эльфы,Пепельный эльф,PROJECT CATALOG
+R-021,Эльфы,Кристальный эльф,PROJECT CATALOG
+R-022,Эльфы,Зимний эльф,PROJECT CATALOG
+R-023,Эльфы,Сумеречный эльф,PROJECT CATALOG
+R-024,Дварфы,Дварф,EARLIER DISCUSSED
+R-025,Дварфы,Горный дварф,PROJECT CATALOG
+R-026,Дварфы,Глубинный дварф,PROJECT CATALOG
+R-027,Дварфы,Рунный дварф,PROJECT CATALOG
+R-028,Дварфы,Магмовый дварф,PROJECT CATALOG
+R-029,Дварфы,Мифриловый дварф,PROJECT CATALOG
+R-030,Дварфы,Каменный дварф,PROJECT CATALOG
+R-031,Орки и гоблиноиды,Орк,EARLIER DISCUSSED
+R-032,Орки и гоблиноиды,Горный орк,PROJECT CATALOG
+R-033,Орки и гоблиноиды,Кровавый орк,PROJECT CATALOG
+R-034,Орки и гоблиноиды,Шаманский орк,PROJECT CATALOG
+R-035,Орки и гоблиноиды,Гоблин,EARLIER DISCUSSED
+R-036,Орки и гоблиноиды,Хобгоблин,PROJECT CATALOG
+R-037,Орки и гоблиноиды,Багбир,PROJECT CATALOG
+R-038,Орки и гоблиноиды,Пещерный гоблин,PROJECT CATALOG
+R-039,Орки и гоблиноиды,Лесной гоблин,PROJECT CATALOG
+R-040,Орки и гоблиноиды,Тролль,PROJECT CATALOG
+R-041,Орки и гоблиноиды,Огр,PROJECT CATALOG
+R-042,Фейри,Фея,EARLIER DISCUSSED
+R-043,Фейри,Лесная фея,PROJECT CATALOG
+R-044,Фейри,Пыльцевая фея,PROJECT CATALOG
+R-045,Фейри,Сумеречная фея,PROJECT CATALOG
+R-046,Фейри,Сильф,PROJECT CATALOG
+R-047,Фейри,Нимфа,PROJECT CATALOG
+R-048,Фейри,Дриада,PROJECT CATALOG
+R-049,Фейри,Наяда,PROJECT CATALOG
+R-050,Фейри,Сатир,PROJECT CATALOG
+R-051,Фейри,Спрайт,PROJECT CATALOG
+R-052,Фейри,Лепрекон,PROJECT CATALOG
+R-053,Нежить,Вампир,EARLIER DISCUSSED
+R-054,Нежить,Высший вампир,PROJECT CATALOG
+R-055,Нежить,Оборотень,EARLIER DISCUSSED
+R-056,Нежить,Призрак,EARLIER DISCUSSED
+R-057,Нежить,Дух,PROJECT CATALOG
+R-058,Нежить,Ревенант,PROJECT CATALOG
+R-059,Нежить,Лич,PROJECT CATALOG
+R-060,Нежить,Скелетный народ,PROJECT CATALOG
+R-061,Нежить,Упырь,PROJECT CATALOG
+R-062,Нежить,Банши,PROJECT CATALOG
+R-063,Нежить,Проклятый странник,PROJECT CATALOG
+R-064,Зверолюди,Зверочеловек,PROJECT CATALOG
+R-065,Зверолюди,Волколюд,PROJECT CATALOG
+R-066,Зверолюди,Лисолюд,PROJECT CATALOG
+R-067,Зверолюди,Кошколюд,PROJECT CATALOG
+R-068,Зверолюди,Тигролюд,PROJECT CATALOG
+R-069,Зверолюди,Медвежий народ,PROJECT CATALOG
+R-070,Зверолюди,Заячий народ,PROJECT CATALOG
+R-071,Зверолюди,Птицелюд,PROJECT CATALOG
+R-072,Зверолюди,Вороний народ,PROJECT CATALOG
+R-073,Зверолюди,Гнолл,EARLIER DISCUSSED
+R-074,Зверолюди,Кентавр,EARLIER DISCUSSED
+R-075,Зверолюди,Минотавр,PROJECT CATALOG
+R-076,Зверолюди,Наги,PROJECT CATALOG
+R-077,Зверолюди,Ящеролюд,PROJECT CATALOG
+R-078,Зверолюди,Черепахолюд,PROJECT CATALOG
+R-079,Драконические,Дракон,EARLIER DISCUSSED
+R-080,Драконические,Красный дракон,PROJECT CATALOG
+R-081,Драконические,Ледяной дракон,PROJECT CATALOG
+R-082,Драконические,Грозовой дракон,PROJECT CATALOG
+R-083,Драконические,Звёздный дракон,PROJECT CATALOG
+R-084,Драконические,Древний дракон,PROJECT CATALOG
+R-085,Драконические,Первозданный дракон,PROJECT CATALOG
+R-086,Драконические,Драконорождённый,PROJECT CATALOG
+R-087,Драконические,Виверна,PROJECT CATALOG
+R-088,Драконические,Дрейк,PROJECT CATALOG
+R-089,Небесные и инфернальные,Ангел,PROJECT CATALOG
+R-090,Небесные и инфернальные,Архангел,PROJECT CATALOG
+R-091,Небесные и инфернальные,Падший ангел,PROJECT CATALOG
+R-092,Небесные и инфернальные,Демон,EARLIER DISCUSSED
+R-093,Небесные и инфернальные,Высший демон,PROJECT CATALOG
+R-094,Небесные и инфернальные,Бес,PROJECT CATALOG
+R-095,Небесные и инфернальные,Инфернальный князь,PROJECT CATALOG
+R-096,Небесные и инфернальные,Небесный страж,PROJECT CATALOG
+R-097,Небесные и инфернальные,Астральный скиталец,PROJECT CATALOG
+R-098,Стихийные,Огненный элементаль,PROJECT CATALOG
+R-099,Стихийные,Водный элементаль,PROJECT CATALOG
+R-100,Стихийные,Воздушный элементаль,PROJECT CATALOG
+R-101,Стихийные,Земляной элементаль,PROJECT CATALOG
+R-102,Стихийные,Ледяной элементаль,PROJECT CATALOG
+R-103,Стихийные,Грозовой элементаль,PROJECT CATALOG
+R-104,Стихийные,Пепельный элементаль,PROJECT CATALOG
+R-105,Стихийные,Элементаль металла,PROJECT CATALOG
+R-106,Стихийные,Элементаль тумана,PROJECT CATALOG
+R-107,Искусственные,Голем,PROJECT CATALOG
+R-108,Искусственные,Глиняный голем,PROJECT CATALOG
+R-109,Искусственные,Каменный голем,PROJECT CATALOG
+R-110,Искусственные,Железный голем,PROJECT CATALOG
+R-111,Искусственные,Кристальный голем,PROJECT CATALOG
+R-112,Искусственные,Часовой автоматон,PROJECT CATALOG
+R-113,Искусственные,Гомункул,PROJECT CATALOG
+R-114,Искусственные,Живой доспех,PROJECT CATALOG
+R-115,Искусственные,Рунный конструкт,PROJECT CATALOG
+R-116,Древние и необычные,Феникс,EARLIER DISCUSSED
+R-117,Древние и необычные,Пепельный феникс,PROJECT CATALOG
+R-118,Древние и необычные,Левиафан,PROJECT CATALOG
+R-119,Древние и необычные,Титан,PROJECT CATALOG
+R-120,Древние и необычные,Гигант,PROJECT CATALOG
+R-121,Древние и необычные,Джинн,PROJECT CATALOG
+R-122,Древние и необычные,Ифрит,PROJECT CATALOG
+R-123,Древние и необычные,Кицунэ,PROJECT CATALOG
+R-124,Древние и необычные,Тэнгу,PROJECT CATALOG
+R-125,Древние и необычные,Они,PROJECT CATALOG
+R-126,Древние и необычные,Гарпия,PROJECT CATALOG
+R-127,Древние и необычные,Горгулья,PROJECT CATALOG
+R-128,Древние и необычные,Потомок звёзд,PROJECT CATALOG
+R-129,Древние и необычные,Пустотник,PROJECT CATALOG
+R-130,Древние и необычные,Химероид,PROJECT CATALOG
+R-131,Древние и необычные,Астральный наследник,PROJECT CATALOG

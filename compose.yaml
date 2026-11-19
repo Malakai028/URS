@@ -1,0 +1,19 @@
+services:
+  game:
+    build: .
+    ports:
+      - "127.0.0.1:4173:4173"
+    environment:
+      NODE_ENV: development
+      PUBLIC_ORIGIN: ${PUBLIC_ORIGIN:-}
+      NARRATOR_URL: ${NARRATOR_URL:-}
+      NARRATOR_MODEL: ${NARRATOR_MODEL:-}
+      NARRATOR_API_KEY: ${NARRATOR_API_KEY:-}
+      ACCOUNT_MAIL_URL: ${ACCOUNT_MAIL_URL:-}
+      ACCOUNT_MAIL_KEY: ${ACCOUNT_MAIL_KEY:-}
+    volumes:
+      - saves:/game/data
+    restart: unless-stopped
+volumes:
+  saves:
+

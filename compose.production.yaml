@@ -1,0 +1,42 @@
+name: ure-production
+services:
+  edge:
+    image: caddy:2-alpine@sha256:003a97808e781aa9f7e75cc2f43d34d461099031faf5e20faefb9f61126836f0
+    environment:
+      PUBLIC_ORIGIN: ${PUBLIC_ORIGIN:?Set the public HTTPS origin}
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - certificates:/data
+      - caddy_config:/config
+    restart: unless-stopped
+  game:
+    build: .
+    image: ure-game:${URE_RELEASE:-local}
+    depends_on:
+      edge:
+        condition: service_started
+        restart: true
+    network_mode: service:edge
+    environment:
+      NODE_ENV: production
+      PUBLIC_ORIGIN: ${PUBLIC_ORIGIN:?Set the public HTTPS origin}
+      HOST: 127.0.0.1
+      PORT: 4173
+      TRUSTED_PROXY: 127.0.0.1
+      DATABASE_FILE: /game/data/ure.sqlite
+      NARRATOR_URL: ${NARRATOR_URL:-}
+      NARRATOR_MODEL: ${NARRATOR_MODEL:-}
+      NARRATOR_API_KEY: ${NARRATOR_API_KEY:-}
+      ACCOUNT_MAIL_URL: ${ACCOUNT_MAIL_URL:-}
+      ACCOUNT_MAIL_KEY: ${ACCOUNT_MAIL_KEY:-}
+    volumes:
+      - saves:/game/data
+    restart: unless-stopped
+    stop_grace_period: 30s
+volumes:
+  saves:
+  certificates:
+  caddy_config:

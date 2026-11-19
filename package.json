@@ -1,0 +1,59 @@
+{
+  "name": "universal-rpg-engine",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=24.12.0"
+  },
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env apps/server/start.ts",
+    "start": "node --env-file-if-exists=.env apps/server/start.ts",
+    "migrate": "node --env-file-if-exists=.env apps/server/setup.ts",
+    "seed": "node --env-file-if-exists=.env apps/server/setup.ts --seed",
+    "build": "tsc --noEmit && vite build",
+    "lint": "eslint apps packages tests scripts/toolchain",
+    "test": "node --test tests/*.test.ts",
+    "test:browser": "node tests/browser.mjs && node tests/browser-account.mjs && node tests/browser-creatures.mjs",
+    "test:creature-bench": "node scripts/toolchain/creature-bench.mjs",
+    "typecheck": "tsc --noEmit",
+    "test:rules": "node --test tests/engine.test.ts tests/toolchain-properties.test.ts",
+    "test:a11y": "node scripts/toolchain/accessibility.mjs",
+    "content:check": "node scripts/toolchain/content.mjs",
+    "format:check": "prettier --check scripts/toolchain tests/toolchain-properties.test.ts .agents/skills/ure-development",
+    "security:audit": "npm audit --audit-level=moderate",
+    "security:secrets": "node scripts/toolchain/secrets.mjs",
+    "security:staged": "node scripts/toolchain/secrets.mjs --staged",
+    "tools:mcp-check": "node scripts/toolchain/mcp-smoke.mjs",
+    "tools:install-secrets": "node scripts/toolchain/install-gitleaks.mjs",
+    "verify": "node scripts/toolchain/verify.mjs"
+  },
+  "dependencies": {
+    "@zxcvbn-ts/core": "4.3.0",
+    "@zxcvbn-ts/language-common": "4.2.0",
+    "bcryptjs": "^3.0.2",
+    "fastify": "^5.6.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "ws": "^8.18.0",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@types/ws": "^8.18.0",
+    "axe-core": "4.14.1",
+    "eslint": "^9.0.0",
+    "fast-check": "4.10.3",
+    "playwright-core": "^1.56.0",
+    "prettier": "3.10.1",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.46.0",
+    "vite": "^7.2.0"
+  }
+}

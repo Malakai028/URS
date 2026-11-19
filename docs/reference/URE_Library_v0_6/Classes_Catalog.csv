@@ -1,0 +1,124 @@
+﻿id,family,name,status
+C-001,Боевые,Воин,EARLIER DISCUSSED
+C-002,Боевые,Рыцарь,PROJECT CATALOG
+C-003,Боевые,Берсерк,PROJECT CATALOG
+C-004,Боевые,Гладиатор,PROJECT CATALOG
+C-005,Боевые,Мастер копья,PROJECT CATALOG
+C-006,Боевые,Мастер меча,PROJECT CATALOG
+C-007,Боевые,Дуэлянт,PROJECT CATALOG
+C-008,Боевые,Страж,PROJECT CATALOG
+C-009,Боевые,Щитоносец,PROJECT CATALOG
+C-010,Боевые,Боевой монах,PROJECT CATALOG
+C-011,Боевые,Кавалерист,PROJECT CATALOG
+C-012,Боевые,Паладин,PROJECT CATALOG
+C-013,Боевые,Полевой командир,PROJECT CATALOG
+C-014,Боевые,Охотник,EARLIER DISCUSSED
+C-015,Боевые,Следопыт,PROJECT CATALOG
+C-016,Боевые,Арбалетчик,PROJECT CATALOG
+C-017,Боевые,Лучник,PROJECT CATALOG
+C-018,Боевые,Снайпер,PROJECT CATALOG
+C-019,Боевые,Палач,PROJECT CATALOG
+C-020,Боевые,Наёмник,PROJECT CATALOG
+C-021,Боевые,Рейдер,PROJECT CATALOG
+C-022,Магические,Маг,EARLIER DISCUSSED
+C-023,Магические,Арканист,PROJECT CATALOG
+C-024,Магические,Стихийный маг,PROJECT CATALOG
+C-025,Магические,Пиромант,PROJECT CATALOG
+C-026,Магические,Криомант,PROJECT CATALOG
+C-027,Магические,Гидромант,PROJECT CATALOG
+C-028,Магические,Аэромант,PROJECT CATALOG
+C-029,Магические,Геомант,PROJECT CATALOG
+C-030,Магические,Электромант,PROJECT CATALOG
+C-031,Магические,Хрономант,PROJECT CATALOG
+C-032,Магические,Пространственный маг,PROJECT CATALOG
+C-033,Магические,Гравимант,PROJECT CATALOG
+C-034,Магические,Иллюзионист,PROJECT CATALOG
+C-035,Магические,Рунный маг,PROJECT CATALOG
+C-036,Магические,Маг крови,PROJECT CATALOG
+C-037,Магические,Маг разума,PROJECT CATALOG
+C-038,Магические,Маг звёзд,PROJECT CATALOG
+C-039,Магические,Маг хаоса,PROJECT CATALOG
+C-040,Магические,Маг порядка,PROJECT CATALOG
+C-041,Магические,Барьершик,PROJECT CATALOG
+C-042,Магические,Некромант,EARLIER DISCUSSED
+C-043,Магические,Призыватель,EARLIER DISCUSSED
+C-044,Сакральные,Священник,EARLIER DISCUSSED
+C-045,Сакральные,Жрец,PROJECT CATALOG
+C-046,Сакральные,Целитель,PROJECT CATALOG
+C-047,Сакральные,Экзорцист,PROJECT CATALOG
+C-048,Сакральные,Оракул,PROJECT CATALOG
+C-049,Сакральные,Прорицатель,PROJECT CATALOG
+C-050,Сакральные,Хранитель клятв,PROJECT CATALOG
+C-051,Сакральные,Друид,PROJECT CATALOG
+C-052,Сакральные,Шаман,PROJECT CATALOG
+C-053,Сакральные,Проводник духов,PROJECT CATALOG
+C-054,Сакральные,Храмовый страж,PROJECT CATALOG
+C-055,Технические,Инженер,EARLIER DISCUSSED
+C-056,Технические,Изобретатель,PROJECT CATALOG
+C-057,Технические,Механик,PROJECT CATALOG
+C-058,Технические,Машиностроитель,PROJECT CATALOG
+C-059,Технические,Артефактор,PROJECT CATALOG
+C-060,Технические,Рунный инженер,PROJECT CATALOG
+C-061,Технические,Энергетик,PROJECT CATALOG
+C-062,Технические,Алхимик,EARLIER DISCUSSED
+C-063,Технические,Химик,PROJECT CATALOG
+C-064,Технические,Металлург,PROJECT CATALOG
+C-065,Технические,Кузнец,PROJECT CATALOG
+C-066,Технические,Ювелир,PROJECT CATALOG
+C-067,Технические,Оружейник,PROJECT CATALOG
+C-068,Технические,Архитектор,PROJECT CATALOG
+C-069,Технические,Горный мастер,PROJECT CATALOG
+C-070,Технические,Картограф,PROJECT CATALOG
+C-071,Технические,Кораблестроитель,PROJECT CATALOG
+C-072,Технические,Лекарь,PROJECT CATALOG
+C-073,Технические,Биолог,PROJECT CATALOG
+C-074,Социальные,Дипломат,PROJECT CATALOG
+C-075,Социальные,Правитель,PROJECT CATALOG
+C-076,Социальные,Стратег,PROJECT CATALOG
+C-077,Социальные,Командир,PROJECT CATALOG
+C-078,Социальные,Торговец,PROJECT CATALOG
+C-079,Социальные,Купец,PROJECT CATALOG
+C-080,Социальные,Банкир,PROJECT CATALOG
+C-081,Социальные,Следователь,PROJECT CATALOG
+C-082,Социальные,Судья,PROJECT CATALOG
+C-083,Социальные,Шпион,PROJECT CATALOG
+C-084,Социальные,Посол,PROJECT CATALOG
+C-085,Социальные,Летописец,PROJECT CATALOG
+C-086,Социальные,Учитель,PROJECT CATALOG
+C-087,Социальные,Исследователь,PROJECT CATALOG
+C-088,Социальные,Учёный,PROJECT CATALOG
+C-089,Социальные,Историк,PROJECT CATALOG
+C-090,Социальные,Переводчик,PROJECT CATALOG
+C-091,Социальные,Бард,PROJECT CATALOG
+C-092,Социальные,Актёр,PROJECT CATALOG
+C-093,Социальные,Проповедник,PROJECT CATALOG
+C-094,Природные и ремесленные,Фермер,PROJECT CATALOG
+C-095,Природные и ремесленные,Зверолов,PROJECT CATALOG
+C-096,Природные и ремесленные,Зверовод,PROJECT CATALOG
+C-097,Природные и ремесленные,Укротитель,PROJECT CATALOG
+C-098,Природные и ремесленные,Травник,PROJECT CATALOG
+C-099,Природные и ремесленные,Повар,PROJECT CATALOG
+C-100,Природные и ремесленные,Рыбак,PROJECT CATALOG
+C-101,Природные и ремесленные,Мореход,PROJECT CATALOG
+C-102,Природные и ремесленные,Геолог,PROJECT CATALOG
+C-103,Природные и ремесленные,Лесничий,PROJECT CATALOG
+C-104,Природные и ремесленные,Разведчик,PROJECT CATALOG
+C-105,Природные и ремесленные,Проводник,PROJECT CATALOG
+C-106,Природные и ремесленные,Охотник за реликвиями,PROJECT CATALOG
+C-107,Природные и ремесленные,Выживальщик,PROJECT CATALOG
+C-108,Природные и ремесленные,Ткач,PROJECT CATALOG
+C-109,Природные и ремесленные,Плотник,PROJECT CATALOG
+C-110,Скрытные и особые,Ассасин,PROJECT CATALOG
+C-111,Скрытные и особые,Вор,PROJECT CATALOG
+C-112,Скрытные и особые,Теневой разведчик,PROJECT CATALOG
+C-113,Скрытные и особые,Ловчий,PROJECT CATALOG
+C-114,Скрытные и особые,Охотник на чудовищ,PROJECT CATALOG
+C-115,Скрытные и особые,Проклинатель,PROJECT CATALOG
+C-116,Скрытные и особые,Проводник порталов,PROJECT CATALOG
+C-117,Скрытные и особые,Управляющий фамильярами,PROJECT CATALOG
+C-118,Скрытные и особые,Песнопевец,PROJECT CATALOG
+C-119,Скрытные и особые,Собиратель легенд,PROJECT CATALOG
+C-120,Скрытные и особые,Странник миров,PROJECT CATALOG
+C-121,Скрытные и особые,Хранитель времени,PROJECT CATALOG
+C-122,Скрытные и особые,Повелитель големов,PROJECT CATALOG
+C-123,Скрытные и особые,Исследователь аномалий,PROJECT CATALOG

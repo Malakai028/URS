@@ -1,0 +1,146 @@
+﻿id,category,name,status
+B-001,Звери и хищники,Серый волк,PROJECT CATALOG
+B-002,Звери и хищники,Зимний волк,PROJECT CATALOG
+B-003,Звери и хищники,Теневой волк,PROJECT CATALOG
+B-004,Звери и хищники,Медведь,PROJECT CATALOG
+B-005,Звери и хищники,Пещерный медведь,PROJECT CATALOG
+B-006,Звери и хищники,Саблезуб,PROJECT CATALOG
+B-007,Звери и хищники,Пепельный лев,PROJECT CATALOG
+B-008,Звери и хищники,Грозовая пантера,PROJECT CATALOG
+B-009,Звери и хищники,Гигантский кабан,PROJECT CATALOG
+B-010,Звери и хищники,Ледяная лисица,PROJECT CATALOG
+B-011,Звери и хищники,Кристальный олень,PROJECT CATALOG
+B-012,Звери и хищники,Пустынный шакал,PROJECT CATALOG
+B-013,Звери и хищники,Костяной гиен,PROJECT CATALOG
+B-014,Звери и хищники,Горный козерог,PROJECT CATALOG
+B-015,Звери и хищники,Степной ящер,PROJECT CATALOG
+B-016,Звери и хищники,Лесной вепрь,PROJECT CATALOG
+B-017,Звери и хищники,Туманный лось,PROJECT CATALOG
+B-018,Звери и хищники,Скальный баран,PROJECT CATALOG
+B-019,Звери и хищники,Болотный хищник,PROJECT CATALOG
+B-020,Звери и хищники,Песчаная рысь,PROJECT CATALOG
+B-021,Рептилии и драконы,Молодой дракон,PROJECT CATALOG
+B-022,Рептилии и драконы,Древний дракон,PROJECT CATALOG
+B-023,Рептилии и драконы,Виверна,PROJECT CATALOG
+B-024,Рептилии и драконы,Дрейк,PROJECT CATALOG
+B-025,Рептилии и драконы,Василиск,PROJECT CATALOG
+B-026,Рептилии и драконы,Кокатрис,PROJECT CATALOG
+B-027,Рептилии и драконы,Гидра,PROJECT CATALOG
+B-028,Рептилии и драконы,Морская змея,PROJECT CATALOG
+B-029,Рептилии и драконы,Каменный варан,PROJECT CATALOG
+B-030,Рептилии и драконы,Лавовая саламандра,PROJECT CATALOG
+B-031,Рептилии и драконы,Ледяной змей,PROJECT CATALOG
+B-032,Рептилии и драконы,Громовой дракончик,PROJECT CATALOG
+B-033,Рептилии и драконы,Песчаный червь,PROJECT CATALOG
+B-034,Рептилии и драконы,Дракон болот,PROJECT CATALOG
+B-035,Рептилии и драконы,Кристальный василиск,PROJECT CATALOG
+B-036,Нежить,Блуждающий скелет,PROJECT CATALOG
+B-037,Нежить,Костяной лучник,PROJECT CATALOG
+B-038,Нежить,Древний страж,PROJECT CATALOG
+B-039,Нежить,Зомби,PROJECT CATALOG
+B-040,Нежить,Упырь,PROJECT CATALOG
+B-041,Нежить,Вурдалак,PROJECT CATALOG
+B-042,Нежить,Спектр,PROJECT CATALOG
+B-043,Нежить,Призрачный рыцарь,PROJECT CATALOG
+B-044,Нежить,Банши,PROJECT CATALOG
+B-045,Нежить,Ревенант,PROJECT CATALOG
+B-046,Нежить,Лич,PROJECT CATALOG
+B-047,Нежить,Король могил,PROJECT CATALOG
+B-048,Нежить,Могильная тень,PROJECT CATALOG
+B-049,Нежить,Кровавый вампир,PROJECT CATALOG
+B-050,Нежить,Гнилостный великан,PROJECT CATALOG
+B-051,Стихийные создания,Огненный дух,PROJECT CATALOG
+B-052,Стихийные создания,Водный дух,PROJECT CATALOG
+B-053,Стихийные создания,Земляной дух,PROJECT CATALOG
+B-054,Стихийные создания,Воздушный дух,PROJECT CATALOG
+B-055,Стихийные создания,Ледяной элементаль,PROJECT CATALOG
+B-056,Стихийные создания,Грозовой элементаль,PROJECT CATALOG
+B-057,Стихийные создания,Железный элементаль,PROJECT CATALOG
+B-058,Стихийные создания,Туманный элементаль,PROJECT CATALOG
+B-059,Стихийные создания,Живой песок,PROJECT CATALOG
+B-060,Стихийные создания,Пепельный вихрь,PROJECT CATALOG
+B-061,Стихийные создания,Торнадо-страж,PROJECT CATALOG
+B-062,Стихийные создания,Лавовый голем,PROJECT CATALOG
+B-063,Стихийные создания,Кристальный осколочник,PROJECT CATALOG
+B-064,Стихийные создания,Живой лес,PROJECT CATALOG
+B-065,Подземные,Гоблин-разведчик,PROJECT CATALOG
+B-066,Подземные,Орк-налётчик,PROJECT CATALOG
+B-067,Подземные,Тролль,PROJECT CATALOG
+B-068,Подземные,Огр,PROJECT CATALOG
+B-069,Подземные,Пещерный паук,PROJECT CATALOG
+B-070,Подземные,Гигантская многоножка,PROJECT CATALOG
+B-071,Подземные,Туннельная жаба,PROJECT CATALOG
+B-072,Подземные,Крот-броненосец,PROJECT CATALOG
+B-073,Подземные,Слизень кислоты,PROJECT CATALOG
+B-074,Подземные,Подземный грибник,PROJECT CATALOG
+B-075,Подземные,Каменный скорпион,PROJECT CATALOG
+B-076,Подземные,Рой летучих мышей,PROJECT CATALOG
+B-077,Подземные,Кристальный жук,PROJECT CATALOG
+B-078,Подземные,Червь-разрушитель,PROJECT CATALOG
+B-079,Подземные,Глубинный мимик,PROJECT CATALOG
+B-080,Растения и грибницы,Хищная лоза,PROJECT CATALOG
+B-081,Растения и грибницы,Сонная орхидея,PROJECT CATALOG
+B-082,Растения и грибницы,Чёрный корнеед,PROJECT CATALOG
+B-083,Растения и грибницы,Лесной энт,PROJECT CATALOG
+B-084,Растения и грибницы,Грибной споровик,PROJECT CATALOG
+B-085,Растения и грибницы,Ядовитый мох,PROJECT CATALOG
+B-086,Растения и грибницы,Плачущая ива,PROJECT CATALOG
+B-087,Растения и грибницы,Кровавый кустарник,PROJECT CATALOG
+B-088,Растения и грибницы,Магический плющ,PROJECT CATALOG
+B-089,Растения и грибницы,Грибная колония,PROJECT CATALOG
+B-090,Растения и грибницы,Солнечный цветок-ловушка,PROJECT CATALOG
+B-091,Растения и грибницы,Болотный мицелий,PROJECT CATALOG
+B-092,Небесные,Гарпия,PROJECT CATALOG
+B-093,Небесные,Грифон,PROJECT CATALOG
+B-094,Небесные,Рух,PROJECT CATALOG
+B-095,Небесные,Феникс,PROJECT CATALOG
+B-096,Небесные,Грозовой орёл,PROJECT CATALOG
+B-097,Небесные,Лунный мотылёк,PROJECT CATALOG
+B-098,Небесные,Небесный змей,PROJECT CATALOG
+B-099,Небесные,Химера,PROJECT CATALOG
+B-100,Небесные,Астральный страж,PROJECT CATALOG
+B-101,Небесные,Светящийся кит,PROJECT CATALOG
+B-102,Небесные,Ночной ворон,PROJECT CATALOG
+B-103,Небесные,Перьевой элементаль,PROJECT CATALOG
+B-104,Небесные,Солнечная мантикора,PROJECT CATALOG
+B-105,Водные,Левиафан,PROJECT CATALOG
+B-106,Водные,Кракен,PROJECT CATALOG
+B-107,Водные,Сирена,PROJECT CATALOG
+B-108,Водные,Глубинная мурена,PROJECT CATALOG
+B-109,Водные,Коралловый голем,PROJECT CATALOG
+B-110,Водные,Гигантский краб,PROJECT CATALOG
+B-111,Водные,Бездонный осьминог,PROJECT CATALOG
+B-112,Водные,Рифовый страж,PROJECT CATALOG
+B-113,Водные,Водная химера,PROJECT CATALOG
+B-114,Водные,Слизень-топитель,PROJECT CATALOG
+B-115,Водные,Пиявка-гигант,PROJECT CATALOG
+B-116,Водные,Рыба-фонарь,PROJECT CATALOG
+B-117,Водные,Морской дракон,PROJECT CATALOG
+B-118,Магические аномалии,Живая тень,PROJECT CATALOG
+B-119,Магические аномалии,Осколок портала,PROJECT CATALOG
+B-120,Магические аномалии,Мимик-сундук,PROJECT CATALOG
+B-121,Магические аномалии,Ходячее зеркало,PROJECT CATALOG
+B-122,Магические аномалии,Пожиратель маны,PROJECT CATALOG
+B-123,Магические аномалии,Петля времени,PROJECT CATALOG
+B-124,Магические аномалии,Химерная масса,PROJECT CATALOG
+B-125,Магические аномалии,Незримый охотник,PROJECT CATALOG
+B-126,Магические аномалии,Ожившая руна,PROJECT CATALOG
+B-127,Магические аномалии,Отражённый двойник,PROJECT CATALOG
+B-128,Магические аномалии,Паразит сна,PROJECT CATALOG
+B-129,Магические аномалии,Пустотный страж,PROJECT CATALOG
+B-130,Магические аномалии,Полевая иллюзия,PROJECT CATALOG
+B-131,Магические аномалии,Эхо заклинателя,PROJECT CATALOG
+B-132,Инфернальные и высшие,Бес,PROJECT CATALOG
+B-133,Инфернальные и высшие,Низший демон,PROJECT CATALOG
+B-134,Инфернальные и высшие,Демон-собиратель,PROJECT CATALOG
+B-135,Инфернальные и высшие,Проклятый страж,PROJECT CATALOG
+B-136,Инфернальные и высшие,Адский гончий,PROJECT CATALOG
+B-137,Инфернальные и высшие,Инфернальный рыцарь,PROJECT CATALOG
+B-138,Инфернальные и высшие,Князь пепла,PROJECT CATALOG
+B-139,Инфернальные и высшие,Небесный дозорный,PROJECT CATALOG
+B-140,Инфернальные и высшие,Ангел-вестник,PROJECT CATALOG
+B-141,Инфернальные и высшие,Астральный паладин,PROJECT CATALOG
+B-142,Инфернальные и высшие,Титан руин,PROJECT CATALOG
+B-143,Инфернальные и высшие,Первозданный дракон,PROJECT CATALOG
+B-144,Инфернальные и высшие,Страж созвездия,PROJECT CATALOG
+B-145,Инфернальные и высшие,Безымянный наблюдатель,PROJECT CATALOG

@@ -1,0 +1,39 @@
+name: URE verification
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: verify-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
+        with:
+          node-version: 24.20.0
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - run: npm ci --ignore-scripts
+      - name: Install locked browser and scanner
+        run: |
+          node node_modules/playwright-core/cli.js install --with-deps --no-shell chromium
+          echo "BROWSER_PATH=$(node -p "require('playwright-core').chromium.executablePath()")" >> "$GITHUB_ENV"
+          npm run tools:install-secrets
+      - name: Run URE verification
+        run: npm run verify
+      - name: Check production image and saved account after container replacement
+        run: bash .github/scripts/container-smoke.sh
