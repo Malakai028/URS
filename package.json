@@ -18,7 +18,7 @@
     "build": "tsc --noEmit && vite build",
     "lint": "eslint apps packages tests scripts/toolchain",
     "test": "node --test tests/*.test.ts",
-    "test:browser": "node tests/browser.mjs && node tests/browser-account.mjs && node tests/browser-creatures.mjs",
+    "test:browser": "node tests/browser.mjs && node tests/browser-account.mjs && node tests/browser-creatures.mjs && npm run test:browser:expedition",
     "test:creature-bench": "node scripts/toolchain/creature-bench.mjs",
     "test:expedition": "node scripts/toolchain/expedition-playthrough.mjs",
     "release:windows": "node scripts/release/windows-package.mjs",
@@ -32,7 +32,8 @@
     "security:staged": "node scripts/toolchain/secrets.mjs --staged",
     "tools:mcp-check": "node scripts/toolchain/mcp-smoke.mjs",
     "tools:install-secrets": "node scripts/toolchain/install-gitleaks.mjs",
-    "verify": "node scripts/toolchain/verify.mjs"
+    "verify": "node scripts/toolchain/verify.mjs",
+    "test:browser:expedition": "node scripts/toolchain/expedition-playthrough.mjs --browser"
   },
   "dependencies": {
     "@zxcvbn-ts/core": "4.3.0",

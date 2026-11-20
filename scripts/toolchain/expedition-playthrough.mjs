@@ -74,67 +74,100 @@ try {
       flaw: "Утомляемость",
     });
   const snapshot = async (cookie) => (await request(cookie, path)).data;
-  const act = async (action) =>
-    (await request(owner, path + "/action", { key: randomUUID(), action }))
-      .data;
-  const use = (skill, extra = {}) => act({ type: "ability", skill, ...extra });
-  assert.equal((await snapshot(owner)).character.xp, "0");
-  await act({ type: "talk" });
-  await use("interact", { target: "cache" });
-  const camp = await snapshot(friend);
-  assert.equal(camp.cacheOpened, true);
-  const loot = camp.objects.filter((o) => o.kind === "loot");
-  assert.equal(loot.length, 2);
-  for (const item of loot) {
-    await act({ type: "gear", op: "take", item: item.id });
-    await act({ type: "gear", op: "equip", item: item.id });
-  }
-  const traverse = async () => {
-    await use("run", { dx: 1, dy: 0 });
-    await pause(650);
-    await use("jump", { dx: 0, dy: 1 });
-    await pause(650);
-  };
-  await traverse();
-  await use("interact", { target: "gate" });
-  await traverse();
-  for (let turn = 0; turn < 100; turn++) {
-    await use("rest");
-    await use("block");
-    await use("attack", { target: "sentinel" });
-    const guard = (await snapshot(owner)).objects.find(
-      (o) => o.id === "sentinel",
+  if (process.argv.includes("--browser")) {
+    const { playBrowserExpedition } =
+      await import("../../tests/browser-expedition.mjs");
+    await playBrowserExpedition({
+      address,
+      world,
+      owner,
+      friend,
+      snapshot,
+      restart: async () => {
+        const port = Number(new URL(address).port);
+        await app.close();
+        app = createApp(file);
+        await app.listen({ host: "127.0.0.1", port });
+      },
+    });
+  } else {
+    const act = async (action) =>
+      (await request(owner, path + "/action", { key: randomUUID(), action }))
+        .data;
+    const use = (skill, extra = {}) =>
+      act({ type: "ability", skill, ...extra });
+    assert.equal((await snapshot(owner)).character.xp, "0");
+    await act({ type: "talk" });
+    await use("interact", { target: "cache" });
+    const camp = await snapshot(friend);
+    assert.equal(camp.cacheOpened, true);
+    const loot = camp.objects.filter((o) => o.kind === "loot");
+    assert.equal(loot.length, 2);
+    for (const item of loot) {
+      await act({ type: "gear", op: "take", item: item.id });
+      await act({ type: "gear", op: "equip", item: item.id });
+    }
+    const traverse = async () => {
+      await use("run", { dx: 1, dy: 0 });
+      await pause(650);
+      await use("jump", { dx: 0, dy: 1 });
+      await pause(650);
+    };
+    await traverse();
+    await use("interact", { target: "gate" });
+    await traverse();
+    for (let turn = 0; turn < 100; turn++) {
+      await use("rest");
+      await use("block");
+      await use("attack", { target: "sentinel" });
+      const guard = (await snapshot(owner)).objects.find(
+        (o) => o.id === "sentinel",
+      );
+      if (!guard || !guard.creature.alive) break;
+      await pause(1550);
+    }
+    await use("walk", { dx: 1, dy: 0 });
+    await use("interact", { target: "beacon" });
+    assert.equal((await snapshot(friend)).beacon, true);
+    const speak = async (action) =>
+      (await request(friend, path + "/action", { key: randomUUID(), action }))
+        .data;
+    const greeting = await speak({ type: "talk" });
+    assert.match(greeting.text, /Маяк горит/);
+    assert.equal(greeting.audit.xpAward, 40);
+    const repeated = await speak({
+      type: "ability",
+      skill: "interact",
+      target: "guide",
+    });
+    assert.equal(repeated.text, greeting.text);
+    assert.equal(repeated.audit.xpAward, 0);
+    assert.equal((await snapshot(friend)).character.xp, "40");
+    const before = await snapshot(owner);
+    await act({
+      type: "level",
+      expected: { level: 0, hero: before.activeHeroId },
+    });
+    const advanced = await snapshot(owner);
+    assert.equal(advanced.character.level, 1);
+    assert.equal(
+      BigInt(advanced.character.xp),
+      BigInt(before.character.xp) - 100n,
     );
-    if (!guard || !guard.creature.alive) break;
-    await pause(1550);
+    await app.close();
+    app = createApp(file);
+    address = await app.listen({ host: "127.0.0.1", port: 0 });
+    const restored = await snapshot(owner);
+    assert.deepEqual(restored.character, advanced.character);
+    const party = await snapshot(friend);
+    assert.equal(party.beacon, true);
+    assert.equal(party.character.level, 0);
+    console.log(
+      "PASS · новая партия, тайник, снаряжение, страж, маяк, " +
+        before.character.xp +
+        " заработанных XP, уровень 1, перезапуск.",
+    );
   }
-  await use("walk", { dx: 1, dy: 0 });
-  await use("interact", { target: "beacon" });
-  assert.equal((await snapshot(friend)).beacon, true);
-  const before = await snapshot(owner);
-  await act({
-    type: "level",
-    expected: { level: 0, hero: before.activeHeroId },
-  });
-  const advanced = await snapshot(owner);
-  assert.equal(advanced.character.level, 1);
-  assert.equal(
-    BigInt(advanced.character.xp),
-    BigInt(before.character.xp) - 100n,
-  );
-  await app.close();
-  app = createApp(file);
-  address = await app.listen({ host: "127.0.0.1", port: 0 });
-  const restored = await snapshot(owner);
-  assert.deepEqual(restored.character, advanced.character);
-  const party = await snapshot(friend);
-  assert.equal(party.beacon, true);
-  assert.equal(party.character.level, 0);
-  console.log(
-    "PASS · новая партия, тайник, снаряжение, страж, маяк, " +
-      before.character.xp +
-      " заработанных XP, уровень 1, перезапуск.",
-  );
 } finally {
   await app.close();
   await rm(dir, { recursive: true, force: true });

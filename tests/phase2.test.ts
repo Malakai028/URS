@@ -238,6 +238,11 @@ test("shared cache, equipment, traversal, combat, loot and beacon have persisten
   assert.equal(s.beacon, true);
   assert.throws(() => ability("interact", "beacon"));
   assert.equal(c.xp, "115");
+  // Enter the same tower again after the party has restored its beacon.
+  c.x = 2;
+  c.y = 2;
+  ability("interact", "gate");
+  assert.match(ability("interact", "gate").text, /Свет маяка/);
   c.x = 1;
   c.y = 1;
   assert.throws(() => ability("walk", undefined, -1, 0));

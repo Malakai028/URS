@@ -10,7 +10,7 @@ import {
 } from "../../packages/shared/phase2.ts";
 import type { Action, Character } from "../../packages/shared/index.ts";
 import { skillTarget } from "../../packages/shared/targeting.ts";
-import { ensure, sight } from "./game.ts";
+import { ensure, guideSpeech, sight } from "./game.ts";
 import type { Area } from "../../packages/shared/creatures.ts";
 import {
   creatureCanSee,
@@ -364,7 +364,11 @@ export function advance(
               : [35, 26];
       text =
         e.area === "vault"
-          ? "Внутри башни слышен звон стража."
+          ? scene.beacon
+            ? "Свет маяка освещает башню."
+            : scene.guardian > 0
+              ? "Внутри башни слышен звон стража."
+              : "В башне тихо. Маяк ещё погашен."
           : e.area === "lodge"
             ? "На площади артели есть колодец."
             : e.area === "cave"
@@ -382,7 +386,11 @@ export function advance(
       text =
         "Руна рассказывает об основании артели. Находка записана в историю.";
     } else if (obj.id === "guide") {
-      text = w.draft.npc + " указывает на тайник к югу и башню на востоке.";
+      text = guideSpeech(
+        w.draft.npc,
+        scene,
+        " указывает на тайник к югу и башню на востоке.",
+      );
       if (!c.talked) {
         c.talked = true;
         audit.xpAward = 40;

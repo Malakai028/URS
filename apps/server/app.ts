@@ -932,7 +932,7 @@ export function createApp(
         } else {
           if (["survey", "talk", "intent"].includes(action.type))
             ensure(details(c).area === "field", "Вернитесь на тракт");
-          result = apply(c, actions.parse(action), w, role, now);
+          result = apply(c, actions.parse(action), w, role, now, sc);
         }
       } catch (e) {
         if (e instanceof GameError) throw e;

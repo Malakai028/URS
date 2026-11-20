@@ -1,4 +1,7 @@
-import { attributes, energyAfterLevel } from "../../packages/engine/attributes.ts";
+import {
+  attributes,
+  energyAfterLevel,
+} from "../../packages/engine/attributes.ts";
 import { randomInt } from "node:crypto";
 import {
   calculateQ,
@@ -82,12 +85,31 @@ export function characterView(c: Character) {
     nextCost: getLevelUpCost(c.level).toString(),
   };
 }
+type BeaconProgress = { beacon: boolean; opened: boolean };
+export function guideSpeech(
+  name: string,
+  scene: BeaconProgress | undefined,
+  directions: string,
+) {
+  if (scene?.beacon)
+    return (
+      name +
+      " смотрит на свет башни: «Маяк горит. Теперь с переправы снова видно дорогу»."
+    );
+  if (scene?.opened)
+    return (
+      name +
+      " указывает на башню (15, 14): «Тайник уже открыт. У входа проверь снаряжение»."
+    );
+  return name + directions;
+}
 export function apply(
   c: Character,
   a: Action,
   world: { seed: string; land: string; draft: Draft },
   role: string,
   now: number,
+  scene?: BeaconProgress,
 ) {
   const audit: Record<string, unknown> = {
     method: "deterministic",
@@ -103,7 +125,7 @@ export function apply(
       проверка: { type: "roll" },
     };
     const action = commands[a.text.toLowerCase()];
-    if (action) return apply(c, action, world, role, now);
+    if (action) return apply(c, action, world, role, now, scene);
     text = "Заявка мастеру: " + a.text;
   }
   if (a.type === "chat" || a.type === "gm") {
@@ -144,10 +166,11 @@ export function apply(
       Math.abs(c.x - npcPos.x) + Math.abs(c.y - npcPos.y) <= 1,
       "Подойдите к проводнику",
     );
-    text =
-      world.draft.npc +
-      " показывает дорогу к руинам (15, 14). " +
-      world.draft.hook;
+    text = guideSpeech(
+      world.draft.npc,
+      scene,
+      " показывает дорогу к руинам (15, 14). " + world.draft.hook,
+    );
     if (!c.talked) {
       reward = 40;
       c.talked = true;
@@ -213,7 +236,8 @@ export function apply(
       rewards: [...c.rewards, ...next.rewards],
       ...energyAfterLevel(c.maxEnergy),
     });
-    text = "Достигнут уровень " + c.level + ". Потрачено " + audit.spent + " XP.";
+    text =
+      "Достигнут уровень " + c.level + ". Потрачено " + audit.spent + " XP.";
   }
   if (reward) c.xp = awardExperience(BigInt(c.xp), BigInt(reward)).toString();
   audit.xpAward = reward;

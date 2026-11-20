@@ -1173,6 +1173,7 @@ function App() {
                             </select>
                           </label>
                           <button
+                            disabled={busy}
                             onClick={() => {
                               if (
                                 selectedCreature &&
